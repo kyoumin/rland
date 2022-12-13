@@ -1,0 +1,22 @@
+/*
+관리자 페이지에서 공통으로 사용하는 색상, 크기 등에 대한 변수들을 정의
+*/
+:root{
+    --color-bg:#1D4683;
+    --color-text:#000;
+    --color-text-dark:#000;
+}
+
+body{
+    font-family:'Inter';
+    font-style:normal;
+    font-weight:500;
+    font-size:13px;
+    line-height:16px;
+    /* color:#000 이렇게 하는것이 아니라 var를 이용해서*/
+    color:var(--color-text);
+}
+
+a{
+    text-decoration: none;
+}

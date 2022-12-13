@@ -1,0 +1,185 @@
+/* .deco {
+    display:inline-flex;
+    align-items: center;
+}
+
+.deco::before{
+    content:'';
+    display: inline-block;
+    /* padding-left: 24px; 
+    width:24px;
+    height: 24px;
+} */
+
+
+/* ----------------------------------------- */
+
+
+/* ------------------집중화 ---------------------*/
+.deco{
+    display: inline-flex;
+    align-items:center;
+    color:#106e8b;
+}
+
+.deco:hover{
+    background-color: #000;
+    border-radius: 10px;
+    color:rgb(254, 199, 0);
+
+}
+
+.deco::before{
+    content: '';
+    display: inline-block;
+    
+    width: 16px;
+    height:16px;
+    background-color:#106e8b;
+    
+    /* background:url(/image/admin/note.svg) no-repeat left center; */
+}
+
+.deco:hover::before{
+    background-color: rgb(254, 199, 0);
+}
+
+
+/* ------------------집중화 ---------------------*/
+
+.deco-note::before{
+    mask-image: url(../../image/admin/note.svg);
+    -webkit-mask-image:url(../../image/admin/note.svg);
+    -webkit-mask-size:16px 16px;  
+}
+
+.deco-category::before{
+    mask-image: url(../../image/admin/category.svg);
+    -webkit-mask-image:url(../../image/admin/category.svg);
+    -webkit-mask-size:16px 16px;  
+}
+
+.deco-test::before{
+    mask-image: url(../../image/admin/test.svg);
+    -webkit-mask-image:url(../../image/admin/test.svg);
+    -webkit-mask-size:16px 16px;  
+}
+
+
+
+
+/* ------------------------------------------ */
+
+/* 
+.deco{
+    display: inline-flex;
+    align-items: center;
+    color:gray;
+    transition: 1s;
+}
+
+.deco:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+.deco::before{
+    content: '';
+    display: inline-block;
+    width:16px;
+    height:16px;
+    background-color: blue;
+    mask-image: url(../../image/admin/note.svg);
+    -webkit-mask-image:url(../../image/admin/note.svg);
+    -webkit-mask-size:16px 16px; 
+    /* transition:1s;  */
+/*
+} */
+
+/* ------------------------------------------ */
+
+/* 
+.deco-note::before{
+
+    mask-image: url(../../image/admin/note.svg);
+    -webkit-mask-image:url(../../image/admin/note.svg);
+
+}
+
+.deco-note:hover::before{
+    background-color: yellow;
+}
+ */
+
+
+/* ------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------category & test -------------------
+
+.deco-category{
+    align-items: center;
+    align-items: center;
+}
+
+.deco-category:hover{
+    background-color: mediumaquamarine;
+    color: white;
+}
+
+.deco-category::before{
+    padding-left: 2px;
+    content: '';
+    display: inline-block;
+    width:16px;
+    height:16px;
+    background-color: blue;
+    mask-image: url(../../image/admin/category.svg);
+    -webkit-mask-image:url(../../image/admin/category.svg);
+    -webkit-mask-size:16px 16px;  
+}
+
+.deco-category:hover::before{
+    background-color: yellow;
+}
+
+
+
+
+
+
+
+
+.deco-test{
+    align-items: center;
+    align-items: center;
+}
+.deco-test::before{
+    padding: 24px;
+    background:url(/image/admin/test.svg) no-repeat left center;
+    background-size:16px 16px;
+}
+
+
+
+
+/* ① li 가 아닌 a 에 데코를 해줘야함 (왜?) a 에 클래스부여
+비트맵- 복잡한이미지 vs 벡터 - 이아콘같이간단한
+③ 아이콘 크기 조절하는 옵션 background-size : contain 
+deco 는 기존의것을 덮어씌우는방식이 아님, 기존의것 망가ㄸ리면 안됨
+before  : 앞이라는 위치, 자식은 content 라는 속성을 통해 들어감
+④ 그림을 내리는게 아닌 박스를 낮춘다
+
+중첩되는 내용 집중시키기 (note, category)
+*/

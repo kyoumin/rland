@@ -1,0 +1,59 @@
+.menu form{
+    display: grid;
+    grid-template:
+    "img title title " 24px
+    "img price option" 24px
+    "img button button" 32px / 80px 60px 1fr;
+}
+
+.menu>form>h1{
+    margin-left: 10px;
+    grid-area:title;
+    font-size: 15px;
+}
+
+.menu-price{
+    margin-left: 10px;
+    grid-area:price;
+}
+
+.menu-option-list{
+    grid-area: option;
+    justify-self:flex-end;
+}
+
+.menu-button-list{
+    grid-area: button;
+    justify-self:flex-end;
+}
+
+.menu-option-input{
+    width:12p;
+    height:12px;
+    border: 1px solid #a24f17;
+}
+
+.menu-option-input-on{
+    background-color:#a24f17;
+}
+
+.menu-option {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-option .menu-option-input{
+    margin-right: 5px;
+}
+
+
+
+
+.menu-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    object-fit: cover;
+
+    grid-area: img,
+}

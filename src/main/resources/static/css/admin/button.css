@@ -1,0 +1,108 @@
+/* 페이지에서 사용하는 버튼을 모아둔곳 */
+
+.btn{
+    
+    padding: .4em .8em;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.8em;
+   
+    display: inline-flex;
+    align-items: center;
+   
+    transition: background-color .5s;
+    
+/* 모든 버튼의 공통 스타일 */
+}
+
+
+ .btn-ok{
+/* ok버튼만의 특화된 스타일 */
+ }
+ .btn-ok:hover{
+    background-color: #ff3232;
+}
+
+
+.btn-toggle{
+    --radius:30px;
+
+    background-color: gray;
+    color:#434343;
+    border: 0px;
+
+    text-indent: -999px;
+    overflow: hidden;
+
+    box-sizing : border-box;
+    width: 60px;
+    height: var(--radius);
+    border-radius: calc(var(--radius)/2);
+
+    border-radius: calc(var(--radius)/2) 0 0 calc(var(--radius)/2);
+    position: relative;
+    transition: all 1.5s;
+}
+
+.btn-toggle .thumb,
+.btn-toggle::before{
+
+    content: 'hahaha';
+    box-sizing: border-box;
+    height: calc(var(--radius) - 4px);
+    width: calc(var(--radius) - 4px);
+    background-color: black;
+    border-radius:calc((var(--radius) - 4px)/2);
+    text-indent: -999px;
+
+    position: absolute;
+    left: 2px;
+    transition: left 1.5s;
+    /* transform: translate(20px,20px); */
+    
+}
+
+.btn-toggle:hover,
+.btn-toggle-on {
+    background-color: green;
+    border-radius: 0 calc(var(--radius)/2) calc(var(--radius)/2) 0;
+    transition: left 1.5s;
+}
+
+
+/* .btn-toggle-on .thumb, */
+.btn-toggle-on::before{
+
+    background-color: red;
+    left:28px;
+    /* right:2px; */
+    /* left 속성이 바뀐게아님  
+    1) transition 이 되지않을경우 동일하지않은 속성이 바뀌고있는건아닌가
+    2) 
+    */
+}
+
+
+
+
+
+ .btn-cancel{
+
+ }
+
+ .btn-strong{
+
+ }
+
+
+ @media (min-width: 500px){ 
+    .btn-toggle-md{
+        --radius:40px; 
+    } 
+}
+
+@media (min-width: 800px){ 
+    .body{
+        flex-direction: row; 
+    } 
+}

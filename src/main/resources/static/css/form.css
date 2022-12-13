@@ -1,0 +1,31 @@
+.input{
+    /*input.type=text*/
+}
+
+.input-chk{
+    padding-right: 0px;
+    width: 10px;
+    height:10px;
+    border:1px solid #a24f17;
+}
+
+.input-chk-on{
+    background-color:#a24f17;
+}
+
+.menu-option{
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.menu-option .input-chk{
+    margin-right: 5px;
+}
+
+.menu-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    object-fit: cover;
+}
